@@ -1,0 +1,335 @@
+//variables
+$backgroundColor: hsl(0, 0%, 90%);
+$white :white;
+$black :#333333;
+$DarkGray : #4F4F4F;
+$lightGray : #828282;
+$blue :#2F80ED;
+
+//mixin
+@mixin whiteCard {
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow:  0 .5rem 1rem rgba($black, .15);
+    padding: 2rem;
+}
+
+@mixin perfectCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 15px;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    @include perfectCenter;
+}
+
+@mixin btnBlue1 {
+    @extend .btn;
+    background-color: $blue;
+    color: $white;
+    border: 1px solid $blue;
+}
+
+@mixin btnBlue2 {
+    @extend .btn;
+    background-color: $white;
+    color: $blue;
+    border: 1px solid $blue;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    height: 100%;
+    font-size: 62.5%;
+}
+
+/*
+****************
+***typografia***
+****************
+*/
+
+h1{
+    font-size: 3.6rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2.4rem;
+}
+
+h4{
+    font-size: 1.8rem;
+}
+
+p,li{
+    font-size: 1.6rem;
+    color: $DarkGray;
+}
+
+h1,h2,h3,h4{
+    color: $black;
+}
+
+/*
+************
+***diseño***
+************
+*/
+
+body{
+    min-height: 100%;
+    background-color: $backgroundColor;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainBox{
+    padding: 0 3rem;
+}
+
+//header
+
+header{
+    background-color: $black;
+    margin-bottom: 3rem;
+
+    h1{
+        color: $white;
+        text-align: center;
+        padding: 2rem 0;
+    }
+}
+
+//PersonalInfo
+
+.personalInfoBox{
+    @include whiteCard;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile{
+    h3{
+        text-decoration: underline;
+        color: $DarkGray;
+        font-style: italic;
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.contactInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    div{
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-gap: 2rem 1rem;
+
+        i{
+            font-size: 2.5rem;
+            color: $DarkGray;
+        }
+        a,p{
+            text-decoration: underline;
+            color: $DarkGray;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+        }
+
+        a:hover{
+            color: black;
+        }
+    }
+}
+
+//SkillsBox
+.skillsBox{
+    @include whiteCard;
+    margin-bottom: 2rem;
+    h2{
+        text-align: center;
+
+    }
+
+    ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2,auto);
+        grid-row-gap: 2rem;
+        margin: 3rem 0;
+
+        :nth-child(1) i{color: orange;}
+        :nth-child(2) i{color: $blue;}
+        :nth-child(3) i{color: hsla(58, 67%, 44%, 0.99);}
+        :nth-child(4) i{color: red;}
+        :nth-child(5) i{color: purple;}
+        :nth-child(6) i{color: palevioletred;}
+        :nth-child(7) i{color: hsla(240, 73%, 36%, 0.99);}
+        :nth-child(8) i{color: hsla(13, 67%, 55%, 0.99);}
+        :nth-child(9) i{color: $black;}
+
+        li::before{
+            content: "\2022";
+            font-size: 3rem;
+            margin-right: 1rem;
+            color: $black;
+        }
+
+        li{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            i{
+                font-size: 5rem;
+                transition: all 300ms;
+            }
+
+            i:hover{
+                scale: 1.25;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.projectsLabel{
+    @include whiteCard;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+//ProjectsBox
+//ProjectCard
+.projectCard {
+    @include whiteCard;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+//imgBox
+.imgBox{
+
+    img{
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 15px;
+    }
+}
+
+//detailsBox
+.detailsBox{
+
+    h3{
+        margin-top: 1.5rem;
+    }
+
+    p{
+        margin-top: 1.5rem;
+    }
+
+    div{
+
+        h4{
+            margin: 1.5rem 0;
+        }
+
+        ul{
+            margin-left: 2rem;
+        }
+    }
+}
+
+//btnBox
+
+.btnBox{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.5rem;
+
+    a:nth-child(1){
+        @include btnBlue1;
+        margin-right: 1rem;
+    }
+
+    a:nth-child(2){
+        @include btnBlue2;
+    }
+
+    a:nth-child(1):hover{
+        @include btnBlue2;
+    }
+
+    a:nth-child(2):hover{
+        @include btnBlue1;
+    }
+}
+
+/*
+*******************
+***MEDIA QUERIES***
+*******************
+*/
+
+@media only screen and (min-width: 600px) {
+
+    .skillsBox{
+        ul{grid-template-columns: repeat(3,auto);}
+    }
+}
+
+@media only screen and (min-width: 800px) {
+
+    .projectCard{
+        flex-direction: row;
+    }
+
+    .detailsBox{
+        margin-left: 3rem;
+        h3{margin-top: 0rem;}
+    }
+
+    .skillsBox{
+        ul{grid-template-columns: repeat(3,auto);}
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .personalInfoBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contactInfo{
+        h3{margin-top: 0rem;}
+    }
+}
+

@@ -1,0 +1,294 @@
+@charset "UTF-8";
+.btn, .btnBox a:nth-child(2):hover, .btnBox a:nth-child(1):hover, .btnBox a:nth-child(2), .btnBox a:nth-child(1) {
+  border-radius: 15px;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+/*
+****************
+***typografia***
+****************
+*/
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+p, li {
+  font-size: 1.6rem;
+  color: #4F4F4F;
+}
+
+h1, h2, h3, h4 {
+  color: #333333;
+}
+
+/*
+************
+***diseño***
+************
+*/
+body {
+  min-height: 100%;
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainBox {
+  padding: 0 3rem;
+}
+
+header {
+  background-color: #333333;
+  margin-bottom: 3rem;
+}
+header h1 {
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.personalInfoBox {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.15);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile h3 {
+  text-decoration: underline;
+  color: #4F4F4F;
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contactInfo h3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contactInfo div {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 2rem 1rem;
+}
+.contactInfo div i {
+  font-size: 2.5rem;
+  color: #4F4F4F;
+}
+.contactInfo div a, .contactInfo div p {
+  text-decoration: underline;
+  color: #4F4F4F;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+.contactInfo div a:hover {
+  color: black;
+}
+
+.skillsBox {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.15);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.skillsBox h2 {
+  text-align: center;
+}
+.skillsBox ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-row-gap: 2rem;
+  margin: 3rem 0;
+}
+.skillsBox ul :nth-child(1) i {
+  color: orange;
+}
+.skillsBox ul :nth-child(2) i {
+  color: #2F80ED;
+}
+.skillsBox ul :nth-child(3) i {
+  color: rgba(187, 182, 37, 0.99);
+}
+.skillsBox ul :nth-child(4) i {
+  color: red;
+}
+.skillsBox ul :nth-child(5) i {
+  color: purple;
+}
+.skillsBox ul :nth-child(6) i {
+  color: palevioletred;
+}
+.skillsBox ul :nth-child(7) i {
+  color: rgba(25, 25, 159, 0.99);
+}
+.skillsBox ul :nth-child(8) i {
+  color: rgba(217, 97, 63, 0.99);
+}
+.skillsBox ul :nth-child(9) i {
+  color: #333333;
+}
+.skillsBox ul li::before {
+  content: "•";
+  font-size: 3rem;
+  margin-right: 1rem;
+  color: #333333;
+}
+.skillsBox ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skillsBox ul li i {
+  font-size: 5rem;
+  transition: all 300ms;
+}
+.skillsBox ul li i:hover {
+  scale: 1.25;
+  cursor: pointer;
+}
+
+.projectsLabel {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.15);
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projectCard {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.15);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.imgBox img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+.detailsBox h3 {
+  margin-top: 1.5rem;
+}
+.detailsBox p {
+  margin-top: 1.5rem;
+}
+.detailsBox div h4 {
+  margin: 1.5rem 0;
+}
+.detailsBox div ul {
+  margin-left: 2rem;
+}
+
+.btnBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.5rem;
+}
+.btnBox a:nth-child(1) {
+  background-color: #2F80ED;
+  color: white;
+  border: 1px solid #2F80ED;
+  margin-right: 1rem;
+}
+.btnBox a:nth-child(2) {
+  background-color: white;
+  color: #2F80ED;
+  border: 1px solid #2F80ED;
+}
+.btnBox a:nth-child(1):hover {
+  background-color: white;
+  color: #2F80ED;
+  border: 1px solid #2F80ED;
+}
+.btnBox a:nth-child(2):hover {
+  background-color: #2F80ED;
+  color: white;
+  border: 1px solid #2F80ED;
+}
+
+/*
+*******************
+***MEDIA QUERIES***
+*******************
+*/
+@media only screen and (min-width: 600px) {
+  .skillsBox ul {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media only screen and (min-width: 800px) {
+  .projectCard {
+    flex-direction: row;
+  }
+
+  .detailsBox {
+    margin-left: 3rem;
+  }
+  .detailsBox h3 {
+    margin-top: 0rem;
+  }
+
+  .skillsBox ul {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .personalInfoBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .contactInfo h3 {
+    margin-top: 0rem;
+  }
+}
+
+/*# sourceMappingURL=styles(CSS).css.map */
