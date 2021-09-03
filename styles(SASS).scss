@@ -187,11 +187,12 @@ header{
         :nth-child(2) i{color: $blue;}
         :nth-child(3) i{color: hsla(58, 67%, 44%, 0.99);}
         :nth-child(4) i{color: red;}
-        :nth-child(5) i{color: purple;}
-        :nth-child(6) i{color: palevioletred;}
-        :nth-child(7) i{color: hsla(240, 73%, 36%, 0.99);}
-        :nth-child(8) i{color: hsla(13, 67%, 55%, 0.99);}
-        :nth-child(9) i{color: $black;}
+        :nth-child(5) i{color: #61DBFB;}
+        :nth-child(6) i{color: purple;}
+        :nth-child(7) i{color: palevioletred;}
+        :nth-child(8) i{color: hsla(240, 73%, 36%, 0.99);}
+        :nth-child(9) i{color: hsla(13, 67%, 55%, 0.99);}
+        :nth-child(10) i{color: $black;}
 
         li::before{
             content: "\2022";
@@ -210,7 +211,7 @@ header{
             }
 
             i:hover{
-                scale: 1.25;
+                transform: scale(1.25);
                 cursor: pointer;
             }
         }
@@ -305,6 +306,12 @@ header{
 }
 
 @media only screen and (min-width: 800px) {
+
+    .imgBox{
+        img{
+        min-width: 400px;
+        }
+    }
 
     .projectCard{
         flex-direction: row;
