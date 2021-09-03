@@ -1,0 +1,16 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://FernandoSM123.github.io/portafolio",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
