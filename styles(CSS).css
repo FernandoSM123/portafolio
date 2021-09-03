@@ -153,18 +153,21 @@ header h1 {
   color: red;
 }
 .skillsBox ul :nth-child(5) i {
-  color: purple;
+  color: #61DBFB;
 }
 .skillsBox ul :nth-child(6) i {
-  color: palevioletred;
+  color: purple;
 }
 .skillsBox ul :nth-child(7) i {
-  color: rgba(25, 25, 159, 0.99);
+  color: palevioletred;
 }
 .skillsBox ul :nth-child(8) i {
-  color: rgba(217, 97, 63, 0.99);
+  color: rgba(25, 25, 159, 0.99);
 }
 .skillsBox ul :nth-child(9) i {
+  color: rgba(217, 97, 63, 0.99);
+}
+.skillsBox ul :nth-child(10) i {
   color: #333333;
 }
 .skillsBox ul li::before {
@@ -183,7 +186,7 @@ header h1 {
   transition: all 300ms;
 }
 .skillsBox ul li i:hover {
-  scale: 1.25;
+  transform: scale(1.25);
   cursor: pointer;
 }
 
@@ -264,6 +267,10 @@ header h1 {
   }
 }
 @media only screen and (min-width: 800px) {
+  .imgBox img {
+    min-width: 400px;
+  }
+
   .projectCard {
     flex-direction: row;
   }
